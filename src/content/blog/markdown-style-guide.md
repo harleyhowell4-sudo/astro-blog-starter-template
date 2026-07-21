@@ -2,7 +2,7 @@
 title: "Senator Roger Marshall Shits Himself On Stage..."
 description: "Attendees wary of an 'Unfriended 2'."
 pubDate: "Jun 19 2024"
-heroImage: "/blog-placeholder-1.jpg"
+heroImage: "/rogermarshall.png"
 ---
 
 <p>
