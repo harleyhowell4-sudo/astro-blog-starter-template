@@ -1,8 +1,8 @@
 ---
-title: "Senator Roger Marshall Shits Himself On Stage..."
-description: "Attendees wary of an 'Unfriended 2'."
+title: "Fair Use"
+description: ""
 pubDate: "Jun 19 2024"
-heroImage: "/rogermarshall.png"
+heroImage: "/fair use screenshot"
 ---
 
 <p>
