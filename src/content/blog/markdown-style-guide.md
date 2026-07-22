@@ -2,7 +2,7 @@
 title: "Fair Use"
 description: ""
 pubDate: "Jun 19 2024"
-heroImage: "/fair use screenshot"
+heroImage: "/fairusescreenshot.png"
 ---
 
 <p>
