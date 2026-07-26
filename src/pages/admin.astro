@@ -20,6 +20,49 @@
         required></textarea><br><br>
 
     <button type="submit">Create Post</button>
+<form id="postForm">
+
+    <input name="title" placeholder="Title" required>
+
+    <textarea name="content" placeholder="Content"></textarea>
+
+    <button type="submit">Save</button>
+
+</form>
+
+<script>
+
+const form = document.getElementById("postForm");
+
+form.addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+
+    const data = {
+
+        title: form.title.value,
+
+        content: form.content.value
+
+    };
+
+    console.log(data);
+
+    const res = await fetch("/api/posts", {
+
+        method: "POST",
+
+        headers: {
+
+            "Content-Type": "application/json"
+
+        },
+
+        body: JSON.stringify(data)
+
+    });
+
+    const result = await res.json
 </form>
 
 <script>
