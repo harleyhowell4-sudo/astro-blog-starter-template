@@ -1,0 +1,39 @@
+---
+---
+
+<html>
+<body>
+
+<h1>Blog Editor</h1>
+
+<form id="post">
+    <input name="title" placeholder="Title"><br>
+    <input name="description" placeholder="Description"><br>
+    <input name="pubDate" placeholder="Jun 19 2024"><br>
+    <input name="heroImage" placeholder="/image.png"><br>
+
+    <textarea
+        name="body"
+        rows="20"
+        cols="80"></textarea>
+
+    <button>Create Post</button>
+</form>
+
+<script>
+document.querySelector("#post").onsubmit = async (e)=>{
+    e.preventDefault();
+
+    const form = new FormData(e.target);
+
+    await fetch("/api/create-post",{
+        method:"POST",
+        body:JSON.stringify(Object.fromEntries(form))
+    });
+
+    alert("Done!");
+}
+</script>
+
+</body>
+</html>
