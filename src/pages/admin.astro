@@ -34,6 +34,34 @@ document.querySelector("#post").onsubmit = async (e)=>{
     alert("Done!");
 }
 </script>
+<form id="postForm">
+  <input name="title" placeholder="Title" />
+  <input name="description" placeholder="Description" />
+  <textarea name="body"></textarea>
 
+  <button type="submit">Publish</button>
+</form>
+
+<script>
+document.getElementById("postForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const data = Object.fromEntries(formData.entries());
+
+    const response = await fetch("https://api.yourdomain.com/create-post", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    });
+
+    const text = await response.text();
+    alert(text);
+});
+</script>
 </body>
 </html>
